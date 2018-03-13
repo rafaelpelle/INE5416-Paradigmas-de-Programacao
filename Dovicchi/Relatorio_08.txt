@@ -1,0 +1,170 @@
+﻿Roteiro 8 - Listas e Array
+
+1) Verifique como declarar as estruturas em C e em Python.
+int array[5]; // declarando um array de tamanho 5 em C
+int matriz[3][3]; // declarando uma matriz 3x3 em C
+
+// Não se "declara" arrays em python. Basta atribuir um array à uma variável.
+array = []
+// Se desejamos atribuir uma matriz de X linhas e Y colunas à uma variável "matriz"
+matriz = [[0 for i in range(X-1)] for j in range(Y-1)]
+
+
+====================  OPERAÇÕES ARITMÉTICAS COM VETORES EM C  ==================
+int vetorMagnitude(int *v1, int size) {
+    int i;
+    int soma = 0;
+    for(i=0; i<size; i++) {
+        soma += (v1[i] * v1[i]);
+    }
+    return sqrt(soma);
+}
+
+void vetorMultiplicacaoPorEscalar(int *v1, int *vResult, int size, int escalar) {
+    int i;
+    for(i=0; i<size; i++) {
+        vResult[i] = v1[i] * escalar;
+    }
+}
+
+void vetorAdicao(int *v1, int *v2, int *vResult, int size) {
+    int i;
+    for(i=0; i<size; i++) {
+        vResult[i] = v1[i] + v2[i];
+    }
+}
+
+void vetorProdutoEscalar(int *v1, int *v2, int *vResult, int size) {
+    int i;
+    for(i=0; i<size; i++) {
+        vResult[i] = v1[i] * v2[i];
+    }
+}
+
+void vetorProdutoVetorial(int *v1, int *v2, int *vResult) {
+    vResult[0] = v1[1]*v2[2] - v2[1]*v1[2];
+    vResult[1] = (-v1[0])*v2[2] + v2[0]*v1[2];
+    vResult[2] = v1[0]*v2[1] - v2[0]*v1[1];
+}
+
+
+==================  OPERAÇÕES ARITMÉTICAS COM MATRIZES EM C  ===================
+
+void matrizTransposicao(int **m1, int **mResult, int sizeLinha, int sizeColuna) {
+    int i, j;
+    for(i=0; i<sizeLinha; i++) {
+        for(j=0; j<sizeColuna; j++) {
+            mResult[j][i] = m1[i][j];
+        }
+    }
+}
+
+void matrizMultPorEscalar(int **m1, int **mResult, int sizeLinha, int sizeColuna, int escalar) {
+    int i, j;
+    for(i=0; i<sizeLinha; i++) {
+        for(j=0; j<sizeColuna; j++) {
+            mResult[i][j] = m1[i][j] * escalar;
+        }
+    }
+}
+
+void matrizAdicao(int **m1, int **m2, int **mResult, int sizeLinha, int sizeColuna) {
+    int i, j;
+    for(i=0; i<sizeLinha; i++) {
+        for(j=0; j<sizeColuna; j++) {
+            mResult[i][j] = m1[i][j] * m2[i][j];
+        }
+    }
+}
+
+void matrizMultiplicacaoDeMatrizes(int **m1, int **m2, int **mResult, int linhas_m1, int colunas_m1, int linhas_m2, int colunas_m2) {
+    if(colunas_m1 != linhas_m2) {
+        printf("Impossível multiplicar estas matrizes.");
+    } else {
+        int i, j, k;
+        for(i=0; i<linhas_m1; i++) {
+            for(j=0; j<colunas_m2; j++) {
+                for(k=0; k<colunas_m1; k++) {
+                    mResult[i][j] += m1[i][k] * m2[k][j];
+                }
+            }
+        }
+    }
+}
+
+=================  OPERAÇÕES ARITMÉTICAS COM VETORES EM PYTHON  ================
+import math
+
+def vetorMagnitude(v1):
+    soma = 0
+    for element in v1:
+        soma += (element ** 2)
+    return math.sqrt(soma)
+
+def vetorMultiplicacaoPorEscalar(v1, escalar):
+    vResult = [0 for x in range(len(v1))]
+    for i, element in enumerate(v1):
+        vResult[i] = element * escalar
+    return vResult
+
+def vetorAdicao(v1, v2):
+    vResult = [0 for x in range(len(v1))]
+    for i in range(0, len(v1)):
+        vResult[i] = v1[i] + v2[i]
+    return vResult
+
+def vetorProdutoEscalar(v1, v2):
+    vResult = [0 for x in range(len(v1))]
+    for i in range(0, len(v1)):
+        vResult[i] = v1[i] * v2[i]
+    return vResult
+
+def vetorProdutoVetorial(v1, v2):
+    vResult = [0 for x in range(3)]
+    vResult[0] = v1[1]*v2[2] - v2[1]*v1[2]
+    vResult[1] = (-v1[0])*v2[2] + v2[0]*v1[2]
+    vResult[2] = v1[0]*v2[1] - v2[0]*v1[1]
+    return vResult
+
+===============  OPERAÇÕES ARITMÉTICAS COM MATRIZES EM PYTHON  =================
+def matrizTransposicao(m1):
+    sizeLinha = len(m1)
+    sizeColuna= len(m1[0])
+    mResult = [[0 for i in range(sizeLinha)] for j in range(sizeColuna)]
+    for i in range(sizeLinha):
+        for j in range(sizeColuna):
+            mResult[j][i] = m1[i][j]
+    return mResult
+
+def matrizMultPorEscalar(m1, escalar):
+    sizeLinha = len(m1)
+    sizeColuna= len(m1[0])
+    mResult = [[0 for i in range(sizeLinha)] for j in range(sizeColuna)]
+    for i in range(sizeLinha):
+        for j in range(sizeColuna):
+            mResult[i][j] = m1[i][j] * escalar
+    return mResult
+
+def matrizAdicao(m1, m2):
+    sizeLinha = len(m1)
+    sizeColuna= len(m1[0])
+    mResult = [[0 for i in range(sizeLinha)] for j in range(sizeColuna)]
+    for i in range(sizeLinha):
+        for j in range(sizeColuna):
+            mResult[i][j] = m1[i][j] + m2[i][j]
+    return mResult
+
+def matrizMultiDeMatrizes(m1, m2):
+    linhas_m1 = len(m1)
+    colunas_m1 = len(m1[0])
+    linhas_m2 = len(m2)
+    colunas_m2 = len(m2[0])
+    if colunas_m1 != linhas_m2:
+        print "Impossível multiplicar estas matrizes."
+        return
+    mResult = [[0 for row in range(colunas_m2)] for col in range(linhas_m1)]
+    for i in range(linhas_m1):
+        for j in range(colunas_m2):
+            for k in range(colunas_m1):
+                mResult[i][j] += m1[i][k] * m2[k][j]
+    return mResult

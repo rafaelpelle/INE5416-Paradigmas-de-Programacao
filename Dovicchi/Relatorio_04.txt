@@ -1,0 +1,30 @@
+Parte 1 - Bases do Cálculo-λ
+
+  1) Encontre os artigos originais de Church que descrevem as bases do cálculo-λ:
+      1. Church, Alonzo “An unsolvable problem of elementary number theory”,
+      American Journal of Mathematics, 58 (1936) pp 345-363 e, também: 2. Church,
+      Alonzo “The Calculi of Lambda-Conversion”, 1941.
+  R1) Ok.
+
+
+  2) Procure por referências sobre o cálculo-λ, principalmente para definições e exemplos.
+  R2) (BARENDREGT, H. Introduction to Lambda Calculus, 1998. Disponível em:
+      <http://www.cse.chalmers.se/research/group/logic/TypesSS05/Extra/geuvers.pdf>.
+      Acesso em: Abril, 2017.
+
+
+  3) Compare com a notação matemática tradicional e tente entender o que muda.
+      Qual a diferença entre variável e argumento?
+  R3) - Matemática tradicional:
+        g(y) = y² + 2y + 1,  f(x) = x + 2.
+        f(g(3)) = g(3) + 2  -> (3² + 2*3 + 1) + 2  ->
+        (9 + 2*3 + 1) + 2  ->  (9 + 6 + 1) + 2 = 18.
+
+      - Cálculo λ:
+        λx.x + 2(λy.y2 + 2y + 1 (3))  ->  λx.(x + 2)(λy.(y2 + 2y + 1) (3))  ->
+        λx.(x + 2)(λy.(3² + 2*3 + 1)) ->  λx.(x + 2)(16)  ->
+        λx.(x + 2)(16)  ->  (16 + 2) = 18.
+
+
+  4) Quais são os tipos de redução do cálculo-λ, encontre exemplos e tente
+      compreender como funcionam.

@@ -1,0 +1,26 @@
+PARTE 1:
+
+1)  YACC (Yet Another Compiler Compiler) é um gerador de analisador sintático desenvolvido por Stephen C. Johnson da AT&T para o sistema operacional Unix. 
+Ele gera um analisador sintático, parte do compilador responsável por fornecer sentido sintático a um determinado código fonte, baseado numa gramática formal
+escrita numa forma similar ao formalismo de Backus-Naur. O resultado é um código para o analisador sintático em C. O YACC costumava ser o gerador de analisador
+sintático padrão na maioria dos sistemas Unix, mas acabou sendo suplantado por versões mais modernas como GNU bison.
+    O GNU bison é compatível com o YACC, e oferece muitas melhorias se comparado com o antigo software. 
+    Flex (fast lexical analyzer generator), é um análisador léxico open-source, uma alternativa para o lex. É comumente utilizado junto com o bison,
+criando tokens a partir dos dados de entrada.
+
+2)  Ambos não estavam instalados. Foram instalados GNU bison versão 3.0.4 e flex versão 2.6.0.
+
+3)  Ok.
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+PARTE 2:
+
+1)  Apenas o arquivo .y foi encontrado.
+
+2)  Apenas o arquivo .y foi copiado.
+
+3)  Apenas o arquivo .y foi analisado.
+
+4)  Primeiramente é feita a definição dos componentes mais básicos da gramática. Só então são definidos componentes mais complexos
+(formados por componentes básicos). Por exemplo: para definir a estrutura do "IF", que é composto por elementos mais básicos como
+uma "expressão" entre parênteses, primeiro é necessário definir o que é uma "expressão".

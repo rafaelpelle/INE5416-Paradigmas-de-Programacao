@@ -1,0 +1,40 @@
+1. Pesquise sobre o termo “lógica combinatória” (ou combinatory logic para info adicional) e tente compreender os combinadores SKI. Consegues diferenciar os combinadores de operadores?
+
+R1: Um combinador é uma "função de ordem superior" que utiliza somente aplicações de funções e outros combinadores para definir um resultado. Já um operador pode conectar duas variáveis.
+
+--------------------------------------------------------------------------------------------------
+
+2. O que é a tese de Church-Turing? O que é a prova da computabilidade e como foi construída?
+
+R2: A tese de Church-Turing, é uma hipótese sobre a natureza de artefatos mecânicos de cálculo, como computadores, e sobre que tipo de algoritmos eles podem executar. "Toda função que seria naturalmente considerada computável pode ser computada por uma Máquina de Turing."
+Touring, em seu artigo, introduziu as máquinas de Turing. No artigo ele mostrou que o 'Entscheidungsproblem' não pode ser resolvido. Alguns meses antes Church provou um resultado similar em sua publicação, mas ele usou as noções de funções recursivas e funções lambda-definíveis para descrever formalmente a computabilidade efetiva.
+
+--------------------------------------------------------------------------------------------------
+
+3. Faça uma pesquisa sobre as linguagens de programação existentes e os seus paradigmas.
+
+R3: A Wikipedia apresenta uma lista com centenas de linguagens de programação.
+	- 14 são linguagens funcionais "puras".
+	- 37 são linguagens funcionais "impuras".
+	- 12 são linguagens lógicas.
+	- 61 são linguagens multi-paradigmas.
+
+--------------------------------------------------------------------------------------------------
+
+4. Lei de Moore, a palestra de Feynman, Peter Shor e a fatoração de números inteiros grandes.
+
+R4: - Em 1965 Gordon E. Moore, então presidente da Intel, previu que o número de transistores em um chip dobraria a cada ano. Na década seguinte a sua previsão foi que dobraria a cada 2 anos. A realidade observada acompanhou esta previsão, dando origem a "Lei de Moore".
+    - Richard P. Feynman foi um físico teórico conhecido pelo seu trabalho em mecânica quântica, eletrodinâmica quântica (que recebeu o Nobel de física) e ajudou no desenvolvimento da bomba atômica durante a segunda guerra mundial. Além do seu trabalho na física teórica, Feynman foi pioneiro na computação quântica e nanotecnologia. Feynman considerou a possibilidade de manipular átomos individualmente em sua palestra "There's Plenty of Room at the Bottom" em 1959. De acordo com Feynman assim seria possível criar circuitos extremamente densos, com muitas operações em paralelo.
+    - A criptografia atual é baseada na premissa de que fatorar um número muito grande é "inviável". Até então essa premissa era válida, na era dos computadores clássicos (não quânticos). Em 1994 Peter Shor criou o algoritmo quântico (roda em computador quântico), de complexidade polinômial, para fatorar grandes números.
+
+--------------------------------------------------------------------------------------------------
+
+5. O que é um qubit? (curiosidade... não precisa se aprofundar)
+
+R5: Um bit quântico. Uma das principais diferenças é que um qubit pode ser 0, 1 ou uma superposição de ambos.
+
+--------------------------------------------------------------------------------------------------
+
+6. D-WAVE ?
+
+R6: D-wave Systems é uma empresa canadense que fabrica computadores quânticos. Seu modelo 1000Q de 1000 qubits está sendo testado pelo Google e pela Nasa. Recentemente anunciou o lançamento do 2000Q de 2000 qubits.
